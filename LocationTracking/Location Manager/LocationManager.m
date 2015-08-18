@@ -100,6 +100,7 @@
             //NSLog(@"User's current location = %@",_userLocality);
         }
     }];
-
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kLocationChangeNotification" object:nil userInfo:@{@"location" : self.currentLocation}];
 }
 @end
